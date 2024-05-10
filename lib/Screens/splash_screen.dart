@@ -1,7 +1,8 @@
-import 'dart:async';
+// import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:testing/Screens/option_screen.dart';
+// import 'package:testing/Screens/option_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,27 +13,38 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    super.initState();
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const OptionScreen(),
-          ));
-    });
-  }
+  // void initState() {
+  //   super.initState();
+  //   Timer(const Duration(seconds: 3), () {
+  //     Navigator.pushReplacement(
+  //         context,
+  //         MaterialPageRoute(
+  //           builder: (context) => const OptionScreen(),
+  //         ));
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Splash Screen",
-          style: TextStyle(
-              fontSize: 35, fontWeight: FontWeight.w900, color: Colors.black),
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text(
+            "Splash Screen",
+            style: TextStyle(
+                fontSize: 35, fontWeight: FontWeight.w900, color: Colors.black),
+          ),
         ),
-      ),
-    );
+        body: Center(
+          child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OptionScreen(),
+                    ));
+              },
+              child: const Text("NEXT")),
+        ));
   }
 }

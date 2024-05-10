@@ -12,6 +12,7 @@ class _OptionScreenState extends State<OptionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
           "Home Screen",
           style: TextStyle(

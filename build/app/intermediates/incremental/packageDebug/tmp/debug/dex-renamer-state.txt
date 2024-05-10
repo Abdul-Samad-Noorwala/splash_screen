@@ -1,0 +1,4 @@
+#Fri May 10 16:06:11 PKT 2024
+base.0=/Users/abdulsamad/Projects/splash_screen/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
